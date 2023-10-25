@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\ProjectController;
 */
 
 Route::get('/', [GuestPageController::class, 'index'])->name('guest.home');
+// Route::get('/projects/detail', [GuestPageController::class, 'index'])->name('guest.detail');
 
 
 Route::middleware(['auth', 'verified'])

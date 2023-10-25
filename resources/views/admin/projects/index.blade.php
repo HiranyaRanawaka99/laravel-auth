@@ -4,9 +4,8 @@
 
 <div class="container mt-5">
 
-  @foreach($projects as $project)
-  <h1> {{ $project->title }} </h1>
-@endforeach
+  <h1> I miei progetti </h1>
+
 
 <table class="table">
   <thead>
@@ -21,9 +20,13 @@
     @forelse($projects as $project)
     <tr>
       <th scope="row"> {{ $project->id}} </th>
-      <td> </td>
+      <td> {{ $project->title }}  </td>
       <td></td>
-      <td> <a href="{{ route('admin.projects.show', $project)}}" class=""> Show </a></td>
+      <td> 
+        <a href="{{ route('admin.projects.show', $project)}}" class=""> Show </a>
+        <a href="{{ route('admin.projects.create')}}" class=""> Crea </a>
+        <a href="{{ route('admin.projects.edit', $project)}}" class=""> Modifica </a>
+      </td>
     </tr>
     @empty
       @endforelse

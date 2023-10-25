@@ -23,7 +23,7 @@
     <div id="app">
       @include('partials._navbar')
 
-      <main class="">
+      <main data-bs-theme="dark">
         @yield('content')
       </main>
     </div>

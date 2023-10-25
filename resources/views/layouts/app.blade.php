@@ -26,6 +26,8 @@
       <main class="">
         @yield('content')
       </main>
+
+      @yield('modals')
     </div>
   </body>
 
